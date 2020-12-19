@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_item_tourNummer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Tournummer"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_tourDatum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="09.09.2020"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_tourNummer"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_tourNummer" />
+
+    <TextView
+        android:id="@+id/tv_item_tourKennzeichen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="KO - RS 633"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_tourNummer"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_tourNummer" />
+
+    <TextView
+        android:id="@+id/tv_item_tourDauer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04:59"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_tourDatum"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_tourKennzeichen" />
+
+    <ImageView
+        android:id="@+id/image_item_tourStatus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_item_tourKennzeichen"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_tourNummer"
+        app:layout_constraintVertical_bias="0.363"
+        app:srcCompat="@drawable/ic_running" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_item_tourKennzeichen"
+        app:layout_constraintStart_toEndOf="@+id/image_item_tourStatus"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_tourNummer" />
+</androidx.constraintlayout.widget.ConstraintLayout>
